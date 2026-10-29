@@ -27,7 +27,7 @@ function setAct(index){if(index===currentAct)return;currentAct=index;filmImgs.fo
 if(!filmWord)return;
 filmWord.classList.add('wipe');filmText?.classList.add('wipe');
 clearTimeout(changing);
-changing=setTimeout(()=>{filmWord.textContent=chapters[index].headline;filmText.textContent=chapters[index].copy;filmChapter.textContent='0'+(index+1);filmCounter.textContent='0'+(index+1);filmKicker.textContent=chapters[index].tag;filmWord.classList.remove('wipe');filmText?.classList.remove('wipe')},reduce?0:210);
+changing=setTimeout(()=>{filmWord.textContent=chapters[index].headline;filmWord.classList.toggle('long',index===2);filmText.textContent=chapters[index].copy;filmChapter.textContent='0'+(index+1);filmCounter.textContent='0'+(index+1);filmKicker.textContent=chapters[index].tag;filmWord.classList.remove('wipe');filmText?.classList.remove('wipe')},reduce?0:210);
 }
 function updateFilm(){
  filmPending=false;if(!film)return;
