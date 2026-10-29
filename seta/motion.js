@@ -2,6 +2,7 @@
 (()=>{'use strict';
 const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 document.documentElement.classList.add('motion-ready');if(reduce)document.documentElement.classList.add('reduce-motion');
+document.querySelectorAll('.about-grid > *, .benefit, .service, .step, .gallery article, .motion-gallery-head > *, .motion-gallery figure, .section-head > *, .contact-layout > *, .band .wrap > *').forEach(el=>el.setAttribute('data-reveal','rise'));
 const ready=()=>document.querySelectorAll('[data-reveal]').forEach((el,i)=>{
  if(reduce||!('IntersectionObserver' in window)){el.classList.add('shown');return}
  const io=window.__kaiReveal||(window.__kaiReveal=new IntersectionObserver(entries=>{
