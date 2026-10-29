@@ -2,7 +2,7 @@
 :root{--electric:#85caff;--laser:#d3eaff;--blueprint:#153350}
 body{background:#090f18}
 .motion-scroll{height:2px;position:fixed;left:0;top:0;z-index:150;background:var(--electric);width:0;pointer-events:none;box-shadow:0 0 25px #83c8ffad}
-#kai-opening{position:fixed;inset:0;z-index:200;background:#07101b;color:white;display:grid;place-items:center;pointer-events:none;transition:clip-path 1.05s cubic-bezier(.73,.01,.2,.99),opacity .6s;clip-path:inset(0);overflow:hidden}
+#kai-opening{display:none;position:fixed;inset:0;z-index:200;background:#07101b;color:white;display:grid;place-items:center;pointer-events:none;transition:clip-path 1.05s cubic-bezier(.73,.01,.2,.99),opacity .6s;clip-path:inset(0);overflow:hidden}
 #kai-opening.done{clip-path:inset(0 0 100% 0)}
 #kai-opening .opening-wrap{display:flex;align-items:center;gap:28px}
 #kai-opening .opening-symbol{font-size:clamp(92px,20vw,230px);line-height:.8;font-weight:800;letter-spacing:-.09em}
